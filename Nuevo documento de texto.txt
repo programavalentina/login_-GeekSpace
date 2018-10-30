@@ -1,0 +1,58 @@
+Fase inicial SCRUM
+
+* Análisis de requerimiento
+
+* Viabilidad técnica
+
+* Busqueda de una solucion tecnica
+
+Definicion.
+
+* Definicion de actividades
+
+* Creacion de Diagrama de actividades
+
+* Crear los planes para la ejecucion
+
+Ejecucion.
+
+* Desarrollo
+
+* Integracion de producto
+
+* Pruebas del producto
+
+Entrega
+
+* Entrega de producto
+
+Soporte y mantenimiento
+
+* Desarrollo de productos para el soporte
+
+Cierre del proyecto
+
+*Se formaliza el cierre del proyecto y lecciones aprendidas
+
+
+
+
+
+
+
+
+
+- Requerimiento del sistema
+
+- Requerimiento de software
+
+- Análisis
+
+- Diseño del programa
+
+- Codificacion
+
+- Pruebas 
+
+- implantacion
+ 

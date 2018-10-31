@@ -1,0 +1,25 @@
+.navbar{
+	margin-bottom: 0px;
+	padding: 12px;
+	background-color:  #233656;
+	color: #fff;
+}
+.navbar-brand{
+	color: #fff;
+}
+.main{
+	padding: 20px;
+	background-color: #5A736B;
+}
+.main2{
+	padding: 20px;
+}
+.footer{
+	padding: 100px;
+	background-color:  #233656;
+	color: #fff;
+}
+body{
+	background-color:  #415B76;
+	color: #FFF;
+}

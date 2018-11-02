@@ -2,9 +2,6 @@
 {% load staticfiles %}
 {% block content %}
 	<div class="row justify-content-center main2 container">
-		<form method="post">
-			{% csrf_token%}
-			{{ form.as_p}}	
-		</form>
+		<h1>Bienvenido @{{user.username}}</h1>
 	</div>
 {% endblock%}

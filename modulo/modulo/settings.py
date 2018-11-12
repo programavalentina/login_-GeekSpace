@@ -26,7 +26,7 @@ SECRET_KEY = '+gy0cs+ne^z2ht!4oks4g$r^(vt*v_n0lmvbxi$w_k4%qt5kr^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -125,3 +125,5 @@ STATIC_ROOT = 'staticfiles'
 STATICFILES_DIRS = (os.path.join(BASE_DIR,'static'),)
 
 LOGIN_REDIRECT_URL = reverse_lazy('users:profile')
+AUTH_USER_MODEL = 'users.User'
+AUTHENTICATION_BACKENDS = ('apps.users.backends.UserAuth',)

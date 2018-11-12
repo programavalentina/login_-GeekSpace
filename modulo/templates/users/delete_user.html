@@ -1,10 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+{%extends 'base/base.html' %}
+{% load staticfiles %}
+{% block content %}
+	<section class="mision">
+		<div class="container texto-blanco ">
+			<section class="Jumbotron">
+				<h2 class="texto-blanco">Delete User</h2>
+			</section>
+			<form method="post" action="" enctype="multipart/form-data">
+				{% csrf_token %}
+				
+				<h4>Desea eliminar el Usuario {{object.username}}  </h4>
+				{{ form.as_p}}
+				<button class="btn btn-primary" type="submit">
+					Delete
+				</button>
+			</form>
+		</div>
+	</section>
+{% endblock%}

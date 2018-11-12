@@ -1,10 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{%extends 'base/base.html' %}
+{% load staticfiles %}
+{% block content %}
+<section class="mision">
+		<div class="container texto-blanco ">
+			<section class="Jumbotron">
+				<h2 class="texto-blanco">Users</h2>
+			</section>
 
-</body>
-</html>
+			<p></p>
+
+			<section class="row justify-content-center">
+
+						<a href="/users/create-user">
+						<button class="btn btn-primary" type="">
+							Create User
+						</button></a>
+						
+			<p></p>
+			<table class="table table-bordered noticia">
+				<thead>
+					<tr>
+						
+						<td>username</td>
+						<td>Name1</td>
+						<td>Name2</td>
+						<td>Name3</td>
+						<td>LastName1</td>
+						<td>LastName2</td>
+						<td>BirthDate</td>
+						<td>Email</td>
+						<td>Phone</td>
+						<td>Type</td>
+						<td>Options</td>
+						
+					</tr>
+				</thead>
+				<tbody>
+					{% if users%}
+					{% for user in users %}
+						<tr>
+							
+							<td>{{user.username}}</td>
+							<td>{{user.Name1}}</td>
+							<td>{{user.Name2}}</td>
+							<td>{{user.Name3}}</td>
+							<td>{{user.LastName1}}</td>
+							<td>{{user.LastName2}}</td>
+							<td>{{user.BirthDate}}</td>
+							<td>{{user.Email}}</td>
+							<td>{{user.Name2}}</td>
+							<td>{{user.Phone}}</td>
+							<td>{{user.Type}}</td>
+							<td>
+								<a href="/users/update-user/{{user.Licence}}/">
+								<button class="btn btn-info" type="">
+									Update
+								</button></a>
+								<a href="/users/delete-user/{{user.Licence}}/">
+								<button class="btn btn-warning" type="">
+									Delete
+								</button></a>
+
+							</td>
+						
+							
+						</tr>
+					{% endfor %}
+					{% endif%}
+				</tbody>
+			</table>
+			</section>
+		</div>
+	</section>
+{% endblock%}

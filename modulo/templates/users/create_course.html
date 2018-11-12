@@ -1,11 +1,17 @@
 {%extends 'base/base.html' %}
 {% load staticfiles %}
 {% block content %}
-	<div class="row justify-content-center main2 container">
-		<form method="post">
+<section class="mision">
+		<div class="container texto-blanco ">
+			<section class="Jumbotron">
+				<h2 class="texto-blanco">Create Course</h2>
+			</section>
+			<form method="post">
 			{% csrf_token%}
 			{{ form.as_p}}
 			<button class="btn btn-primary" type="submit">Create</button>	
 		</form>
-	</div>
+		</div>
+	</section>
 {% endblock%}
+

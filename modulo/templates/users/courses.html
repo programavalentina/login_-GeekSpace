@@ -1,0 +1,61 @@
+{%extends 'base/base.html' %}
+{% load staticfiles %}
+{% block content %}
+<section class="mision">
+		<div class="container texto-blanco ">
+			<section class="Jumbotron">
+				<h2 class="texto-blanco">Courses</h2>
+			</section>
+
+			<p></p>
+
+			<section class="row justify-content-center">
+
+			
+						<a href="/users/create-course">
+						<button class="btn btn-primary" type="">
+							Create Course
+						</button></a>
+						
+				
+			<p></p>
+			<table class="table table-bordered noticia">
+				<thead>
+					<tr>
+						
+						<td>NameCourse</td>
+						<td>Description</td>
+						<td>Teacher</td>
+						<td>Options</td>
+					</tr>
+				</thead>
+				<tbody>
+					{% if courses%}
+					{% for course in courses %}
+						<tr>
+							
+							<td>{{course.NameCourse}}</td>
+							<td>{{course.Description}}</td>
+							<td>{{course.Teacher}}</td>
+							<td>
+								<a href="/users/update-course/{{course.IdCourse}}/">
+								<button class="btn btn-info" type="">
+									Update
+								</button></a>
+								<a href="/users/delete-course/{{course.IdCourse}}/">
+								<button class="btn btn-warning" type="">
+									Delete
+								</button></a>
+
+							</td>
+						
+							
+						</tr>
+					{% endfor %}
+					{% endif%}
+				</tbody>
+			</table>
+			</section>
+		</div>
+	</section>
+{% endblock%}

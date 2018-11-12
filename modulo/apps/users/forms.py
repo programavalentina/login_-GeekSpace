@@ -1,6 +1,7 @@
-from .models import User
+from .models import *
 from django.contrib.auth.forms import UserCreationForm
-from django.forms import widgets, forms
+from django.forms import widgets
+from django import forms
 
 class UserForm(UserCreationForm):
     class Meta:
@@ -39,8 +40,30 @@ class UserForm(UserCreationForm):
             'Email': widgets.TextInput(attrs={'class': 'form-control'}),
             'Phone': widgets.TextInput(attrs={'class': 'form-control'}),
             'BirthDate': widgets.DateTimeInput(attrs={'class': 'form-control'}),
+            'FKLicenceType ': widgets.Select(attrs={'class': 'form-control'}),
         }
 
 class LoginForm(forms.Form):
     username = forms.Field(widget=widgets.TextInput(attrs={'class':'form-control'}))
     password = forms.Field(widget=widgets.PasswordInput(attrs={'class':'form-control'}))
+
+class CourseForm(forms.ModelForm):
+    class Meta:
+        model = Course
+
+        fields = [
+
+            'NameCourse',
+            'Description',
+            'Teacher',
+        ]
+        labels = {
+            'NameCourse':'NameCourse',
+            'Description': 'Description',
+            'Teacher':'Teacher',
+        }
+        widgets = {
+            'NameCourse': widgets.TextInput(attrs={'class': 'form-control'}),
+            'Description': widgets.TextInput(attrs={'class': 'form-control'}),
+            'BirthDate': widgets.Select(attrs={'class': 'form-control'}),
+        }

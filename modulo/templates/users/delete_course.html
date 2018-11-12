@@ -1,0 +1,20 @@
+{%extends 'base/base.html' %}
+{% load staticfiles %}
+{% block content %}
+	<section class="mision">
+		<div class="container texto-blanco ">
+			<section class="Jumbotron">
+				<h2 class="texto-blanco">Delete Course</h2>
+			</section>
+			<form method="post" action="" enctype="multipart/form-data">
+				{% csrf_token %}
+				
+				<h4>Desea eliminar el Curso {{object.NameCourse}}  </h4>
+				{{ form.as_p}}
+				<button class="btn btn-primary" type="submit">
+					Delete
+				</button>
+			</form>
+		</div>
+	</section>
+{% endblock%}

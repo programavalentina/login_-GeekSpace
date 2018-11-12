@@ -73,7 +73,7 @@ class Course(models.Model):
     IdCourse = models.AutoField(primary_key=True)
     NameCourse = models.CharField(max_length=45)
     Description = models.TextField()
-    Teacher = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    Teacher = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
 
 
 class ListStudents(models.Model):

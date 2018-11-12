@@ -27,15 +27,20 @@
 				      {% endif%}
 				    </ul>
 				    	{% if user.is_authenticated %}
-				    	<a href="/users/logout">
-				      	<button class="btn btn-primary my-2 my-sm-0" type="submit">Logout</button>
-				      	</a>
+				    	
+				        <ul class="navbar-nav">
+				     		 <li class="nav-item active">
+				        		<a class="nav-link" href="/users/profile">Profile <span class="sr-only">(current)</span></a>
+				      		</li>
+				  				<a href="/users/logout">
+				      			<button class="btn btn-primary my-2 my-sm-0" type="submit">Logout</button>
+				      			</a>
 				    	{% else %}
 						<a href="/users/login">
 				      	<button class="btn btn-primary my-2 my-sm-0" type="submit">Login</button>
 				      	</a>
 				    	{% endif%}
-				      
+				      </ul>
 				      
 				  </div>
 				</nav>
